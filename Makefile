@@ -6,7 +6,7 @@
 #    By: hakahmed <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/07 19:15:07 by hakahmed          #+#    #+#              #
-#    Updated: 2023/04/10 13:03:24 by hakim            ###   ########.fr        #
+#    Updated: 2023/04/10 13:35:15 by hakim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,8 +110,7 @@ SRC = $(addprefix $(P1DIR)/,$(SRC_P1)) \
 # ==== ==== INCLUDES ==== ==== #
 
 INCDIR = inc
-INC = libft.h
-IFLAGS = -I inc 
+IFLAGS = -I $(INCDIR)
 
 # ==== ==== ENDINC ==== ==== #
 
@@ -123,7 +122,7 @@ OBJ = $(addprefix $(OBJDIR)/,$(SRC:.c=.o))
 
 BNS = $(addprefix $(BONUSDIR)/,$(SRC_BONUS))
 
-BONUSOBJ = $(BNS:.c=.o)
+BONUSOBJ = $(addprefix $(OBJDIR)/,$(BNS:.c=.o))
 
 # ==== ==== COLORS ==== ==== #
 
@@ -172,3 +171,6 @@ fclean: clean
 re: fclean all
 
 rebonus: fclean bonus
+
+prt:
+	@curl parrot.live
