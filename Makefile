@@ -6,7 +6,7 @@
 #    By: hakahmed <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/07 19:15:07 by hakahmed          #+#    #+#              #
-#    Updated: 2023/04/10 13:35:15 by hakim            ###   ########.fr        #
+#    Updated: 2023/04/10 13:44:01 by hakim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,8 @@ BONUSDIR = bonus
 ADTDIR = additional
 
 PRINTFDIR = ft_printf
+
+GNLDIR = get_next_line
 
 # ==== ==== END ==== ==== #
 
@@ -95,15 +97,20 @@ SRC_PRINTF = ft_printf.c \
 	     str_utils.c \
 	     nb_utils.c \
 
+SRC_GNL = get_next_line.c \
+	  get_next_line_utils.c \
+
 SRC_ADT = ft_atol.c \
 	  ft_free_strarr.c \
 	  ft_isspace.c \
 	  ft_strcmp.c \
 
+
 SRC = $(addprefix $(P1DIR)/,$(SRC_P1)) \
       $(addprefix $(P2DIR)/,$(SRC_P2)) \
       $(addprefix $(ADTDIR)/,$(SRC_ADT)) \
       $(addprefix $(PRINTFDIR)/,$(SRC_PRINTF)) \
+      $(addprefix $(GNLDIR)/,$(SRC_GNL)) \
 
 # ==== ==== END SRC FILES ==== ==== #
 

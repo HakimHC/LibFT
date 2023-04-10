@@ -6,7 +6,7 @@
 /*   By: hakahmed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 19:16:14 by hakahmed          #+#    #+#             */
-/*   Updated: 2023/03/30 20:43:36 by hakahmed         ###   ########.fr       */
+/*   Updated: 2023/04/10 13:52:51 by hakim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,12 @@ int					ft_putnbr_base(unsigned long int n, char *base, int *len);
 void				ft_free_strarr(char **arr);
 int					ft_strcmp(char *s1, char *s2);
 int					ft_isspace(char c);
-long					ft_atol(char *str);
+long				ft_atol(char *str);
+char				*get_next_line(int fd);
+char				*get_l(char *buff);
+char				*read_buffer(char *s, int i);
+char				*ft_substr_gnl(char const *s, size_t len);
+char				*ft_strjoin_free(char const *s1, char const *s2);
+char				*ft_strdup_free(char const *s1);
 
 #endif
