@@ -6,7 +6,7 @@
 /*   By: hakahmed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:44:28 by hakahmed          #+#    #+#             */
-/*   Updated: 2023/03/08 13:34:15 by hakahmed         ###   ########.fr       */
+/*   Updated: 2023/04/10 14:04:07 by hakim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	char	*d;
 	int		i;
 
+	if (!s)
+		return (0);
 	d = (char *) s;
 	i = 0;
 	while (d[i])
